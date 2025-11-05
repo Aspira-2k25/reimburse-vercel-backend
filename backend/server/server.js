@@ -10,6 +10,8 @@ const upload = require('./middleware/multer');
 const uploadRoute = require('./controllers/routeUpload')
 
 const app = express();
+//for vercel
+app.get('/', (req, res) => res.json({ ok: true, service: 'backend' }));
 
 // Middleware
 app.use(cors());
